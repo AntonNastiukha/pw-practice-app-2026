@@ -2,12 +2,9 @@ pipeline {
     agent any
 
     stages {
-        stage('Environment') {
+        stage('Check Docker') {
             steps {
-                echo 'Current workspace information'
-
-                sh 'pwd'
-                sh 'ls -la'
+                sh 'docker --version'
             }
         }
     }
