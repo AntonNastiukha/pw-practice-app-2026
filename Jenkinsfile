@@ -2,9 +2,12 @@ pipeline {
     agent any
 
     stages {
-        stage('Checkout') {
+        stage('Environment') {
             steps {
-                echo 'Repository cloned successfully!'
+                echo 'Current workspace information'
+
+                sh 'pwd'
+                sh 'ls -la'
             }
         }
     }
