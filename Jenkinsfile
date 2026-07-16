@@ -1,7 +1,11 @@
 pipeline {
     agent any
 
-    steps {
-        bat 'allure --version'
+    stages {
+        stage('Run Docker') {
+            steps {
+                 bat 'allure --version'
+            }
+        }
     }
 }
