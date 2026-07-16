@@ -2,9 +2,10 @@ pipeline {
     agent any
 
     stages {
-        stage('Checkout') {
+        stage('Check Docker') {
             steps {
-                echo 'Repository cloned successfully!'
+                bat 'docker --version'
+                bat 'docker compose version'
             }
         }
     }
