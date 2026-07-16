@@ -4,8 +4,7 @@ pipeline {
     stages {
         stage('Check Docker') {
             steps {
-                bat 'docker --version'
-                bat 'docker compose version'
+                docker compose up
             }
         }
     }
