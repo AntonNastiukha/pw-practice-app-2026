@@ -2,9 +2,9 @@ pipeline {
     agent any
 
     stages {
-        stage('Check Docker') {
+        stage('Run Docker') {
             steps {
-                docker compose up
+                bat 'docker compose up'
             }
         }
     }
