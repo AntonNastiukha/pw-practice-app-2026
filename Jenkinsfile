@@ -1,4 +1,6 @@
-stage('Check Allure') {
+pipeline {
+    agent any
+
     steps {
         bat 'allure --version'
     }
