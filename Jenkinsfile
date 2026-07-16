@@ -1,11 +1,5 @@
-pipeline {
-    agent any
-
-    stages {
-        stage('Run Docker') {
-            steps {
-                bat 'docker compose up'
-            }
-        }
+stage('Check Allure') {
+    steps {
+        bat 'allure --version'
     }
 }
